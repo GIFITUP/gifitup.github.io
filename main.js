@@ -1,11 +1,9 @@
 var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
-//var apikey = 'dc6zaTOxFJmzC';
+$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
 
 $(document).ready(function() {
-//$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif"'>");  
-  $("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200w.gif"'>");
-
- /* 
+  
+  /* 
   * The following two functions are used for making the API call using
   * pure Javascript. I wouldn't worry about the details
   */
@@ -34,26 +32,24 @@ $(document).ready(function() {
   * that we search for.
   */
 
-  function getGif() {
-    //    var params = { 'api_key': apikey, 'q': query};
-//    var params = { 'api_key': apikey };
-//   params = encodeQueryData(params);
+  function getGif(query) {
+    console.log(query);
+    query = query.replace(' ', '+');
+    var params = { 'api_key': apikey, 'q': query};
+    params = encodeQueryData(params);
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
-   // httpGetAsync('http://api.giphy.com/v1/gifs/random?'+ params, function(data) {
- httpGetAsync('http://api.giphy.com/v1/gifs/random?EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', function(data) {
-
+    httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
       var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.fixed_width.url;
- //     $("#image").html("<img src='" + http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif + "'>");
-     $("#image").html("<img src='" + firstgif + "'>");
-
-   console.log(gifs.data);
+      $("#image").html("<img src='" + firstgif + "'>");
+      console.log(gifs.data);
     });
   }
 
   $("#submitButton").on("click", function() {
-    getGif();
+    var query = $("#inputQuery").val();
+    getGif(query);
   });
 })
