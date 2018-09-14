@@ -35,13 +35,16 @@ $(document).ready(function() {
   function getGif(query) {
     console.log(query);
     query = query.replace(' ', '+');
-    var params = { 'api_key': apikey, 'q': query};
+//    var params = { 'api_key': apikey, 'q': query};
+    var params = { 'api_key': apikey };
     params = encodeQueryData(params);
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
-    httpGetAsync('http://api.giphy.com/v1/gifs/random?' + params, function(data) {
-      var gifs = JSON.parse(data);
+   // httpGetAsync('http://api.giphy.com/v1/gifs/random?'+ params, function(data) {
+ httpGetAsync('http://api.giphy.com/v1/gifs/random?'+ params, function(data) {
+
+    var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.fixed_width.url;
       $("#image").html("<img src='" + firstgif + "'>");
       console.log(gifs.data);
