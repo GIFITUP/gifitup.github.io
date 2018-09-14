@@ -38,10 +38,10 @@ $(document).ready(function() {
     params = encodeQueryData(params);
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
-
-    httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
+    // http://api.giphy.com/v1/gifs/random?
+    httpGetAsync('http://api.giphy.com/v1/gifs/random?', function(data) {
       var gifs = JSON.parse(data);
-      var firstgif = gifs.data[0].images.fixed_width.url;
+      var firstgif = gifs.data[0].bitly_gif_url;
       $("#image").html("<img src='" + firstgif + "'>");
       console.log(gifs.data);
     });
