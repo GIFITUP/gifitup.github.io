@@ -3,7 +3,7 @@ var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
 
 $(document).ready(function() {
 //$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif"'>");  
-  $("#image").html("<img src="http://media2.giphy.com/media/FiGiRei2ICzzG/200w.gif">");
+  $("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200w.gif"'>");
 
  /* 
   * The following two functions are used for making the API call using
