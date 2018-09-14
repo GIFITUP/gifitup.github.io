@@ -1,5 +1,4 @@
 var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
-$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
 
 $(document).ready(function() {
   
@@ -49,7 +48,6 @@ $(document).ready(function() {
   }
 
   $("#submitButton").on("click", function() {
-    $("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
     var query = $("#inputQuery").val();
     getGif(query);
   });
