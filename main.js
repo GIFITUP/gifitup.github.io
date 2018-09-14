@@ -44,8 +44,10 @@ $(document).ready(function() {
 
       var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.original.url;
-      $("#image").html("<img src='" + firstgif + "'>");
-      console.log(gifs.data);
+      $("#image").html("<img src='" + http://media2.giphy.com/media/FiGiRei2ICzzG/giphy.gif + "'>");
+//      $("#image").html("<img src='" + firstgif + "'>");
+
+   console.log(gifs.data);
     });
   }
 
