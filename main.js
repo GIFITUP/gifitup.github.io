@@ -32,17 +32,15 @@ $(document).ready(function() {
   * that we search for.
   */
 
-  function getGif(query) {
-    console.log(query);
-    query = query.replace(' ', '+');
-//    var params = { 'api_key': apikey, 'q': query};
-    var params = { 'api_key': apikey };
-    params = encodeQueryData(params);
+  function getGif() {
+    //    var params = { 'api_key': apikey, 'q': query};
+//    var params = { 'api_key': apikey };
+//   params = encodeQueryData(params);
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
    // httpGetAsync('http://api.giphy.com/v1/gifs/random?'+ params, function(data) {
- httpGetAsync('http://api.giphy.com/v1/gifs/random?'+ params, function(data) {
+ httpGetAsync('http://api.giphy.com/v1/gifs/random?EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', function(data) {
 
     var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.original.url;
@@ -52,7 +50,6 @@ $(document).ready(function() {
   }
 
   $("#submitButton").on("click", function() {
-    var query = $("#inputQuery").val();
-    getGif(query);
+    getGif();
   });
 })
