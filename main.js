@@ -40,8 +40,8 @@ $(document).ready(function() {
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
-//    httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
-      httpGetAsync('http://api.giphy.com/v1/gifs/random?dc6zaTOxFJmzC', function(data) {
+     httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
+ //     httpGetAsync('http://api.giphy.com/v1/gifs/random?', function(data) {
 
       var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.original.url;
