@@ -31,10 +31,8 @@ $(document).ready(function() {
   * that we search for.
   */
 
-  function getGif(query) {
-    console.log(query);
-    query = query.replace(' ', '+');
-    var params = { 'api_key': apikey, 'q': query};
+  function getGif() {
+    var params = { 'api_key': apikey};
     params = encodeQueryData(params);
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
@@ -48,7 +46,6 @@ $(document).ready(function() {
   }
 
   $("#submitButton").on("click", function() {
-    var query = $("#inputQuery").val();
-    getGif(query);
+    getGif();
   });
 })
