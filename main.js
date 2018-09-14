@@ -49,7 +49,8 @@ $(document).ready(function() {
   }
 
   $("#submitButton").on("click", function() {
-    var query = $("#inputQuery").val();
+ //   var query = $("#inputQuery").val();
+    var query =$("cats");
     getGif(query);
   });
 })
