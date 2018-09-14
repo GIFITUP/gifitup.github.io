@@ -1,5 +1,5 @@
-//var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
-var apikey = 'dc6zaTOxFJmzC';
+var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
+//var apikey = 'dc6zaTOxFJmzC';
 
 $(document).ready(function() {
   
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
-    httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
+    httpGetAsync('http://api.giphy.com/v1/gifs/random?' + params, function(data) {
       var gifs = JSON.parse(data);
       var firstgif = gifs.data[0].images.fixed_width.url;
       $("#image").html("<img src='" + firstgif + "'>");
