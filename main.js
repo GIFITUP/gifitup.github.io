@@ -42,7 +42,7 @@ $(document).ready(function() {
 
     httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
       var gifs = JSON.parse(data);
-      var firstgif = gifs.data[0].images.fixed_height.url;
+      var firstgif = gifs.data[0].images.original.url;
       $("#image").html("<img src='" + firstgif + "'>");
       console.log(gifs.data);
     });
