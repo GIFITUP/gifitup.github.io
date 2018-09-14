@@ -49,6 +49,7 @@ $(document).ready(function() {
   }
 
   $("#submitButton").on("click", function() {
+    $("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
     var query = $("#inputQuery").val();
     getGif(query);
   });
