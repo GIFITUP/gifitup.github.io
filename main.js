@@ -1,6 +1,6 @@
 //var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
 var apikey = 'dc6zaTOxFJmzC';
-$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
+//$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
 $(document).ready(function() {
   
   /* 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
     // api from https://github.com/Giphy/GiphyAPI#search-endpoint 
 
-     httpGetAsync('http://api.giphy.com/v1/gifs/search?' + params, function(data) {
+     httpGetAsync('http://api.giphy.com/v1/gifs/random?' + params, function(data) {
  //     httpGetAsync('http://api.giphy.com/v1/gifs/random?', function(data) {
 
       var gifs = JSON.parse(data);
