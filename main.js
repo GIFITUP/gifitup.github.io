@@ -1,6 +1,6 @@
 //var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
 var apikey = 'dc6zaTOxFJmzC';
-
+$("#image").html("<img src='"http://media2.giphy.com/media/FiGiRei2ICzzG/200.gif"'>");
 $(document).ready(function() {
   
   /* 
