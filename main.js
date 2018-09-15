@@ -51,7 +51,6 @@ $(document).ready(function() {
 
   $("#submitButton").on("click", function() {
     var query = $("#inputQuery").val();
-    //query = "cat";
     getGif(query);
   });
 })
