@@ -32,5 +32,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 $("#submitButton").on("click", function () {
-window.location.reload();
-});
+	window.location.reload();
+	location.reload(true/false);
+};
