@@ -13,7 +13,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	request = new XMLHttpRequest;
 	request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', true);
 	
-	request.onload = function() {
+	$("#submitButton").on("click", function () {
+//	request.onload = function() {
 		if (request.status >= 200 && request.status < 400){
 			data = JSON.parse(request.responseText).data.image_url;
 			console.log(data);
