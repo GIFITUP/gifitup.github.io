@@ -7,14 +7,14 @@
 // 2014 - Neal Shyam [@nealrs | nealshyam.com]
 //$("#submitButton").on("click", function() {
 
-
+	
 document.addEventListener('DOMContentLoaded', function () {
 	q = "finger guns"; // search query
 	request = new XMLHttpRequest;
 	request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', true);
 	
-	$("#submitButton").on("click", function () {
-//	request.onload = function() {
+	
+	request.onload = function() {
 		if (request.status >= 200 && request.status < 400){
 			data = JSON.parse(request.responseText).data.image_url;
 			console.log(data);
@@ -30,4 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 	request.send();
 });
-//};
+
+$("#submitButton").on("click", function () {
+window.location.reload();
+});
