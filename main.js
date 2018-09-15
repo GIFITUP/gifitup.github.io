@@ -1,7 +1,5 @@
-//var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
-var apikey = 'dc6zaTOxFJmzC';
-//$("#image").html("<img src='"https://giphy.com/gifs/foosball-y1ZBcOGOOtlpC"'>");
-
+var apikey = 'EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6';
+//var apikey = 'dc6zaTOxFJmzC';
 
 $(document).ready(function() {
   
