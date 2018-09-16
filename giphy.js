@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	q = "finger guns"; // search query
 	
 	request = new XMLHttpRequest;
-	request.open('GET', 'http://api.giphy.com/v1/gifs/random?api_key=EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', true);
+	request.open('GET', 'https://api.giphy.com/v1/gifs/random?api_key=EOvxPf7jMMtXmpW6GVGndluHTFeJdFd6', true);
 	
 	request.onload = function() {
 		if (request.status >= 200 && request.status < 400){
